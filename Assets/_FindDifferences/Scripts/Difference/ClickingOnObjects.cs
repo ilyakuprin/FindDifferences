@@ -1,8 +1,9 @@
 using System;
+using Zenject;
 
 namespace _FindDifferences.Scripts.Difference
 {
-    public class ClickingOnObjects : IDisposable
+    public class ClickingOnObjects : IInitializable, IDisposable
     {
         public event Action DifferenceFound;
 
