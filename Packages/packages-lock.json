@@ -1,11 +1,26 @@
 {
   "dependencies": {
+    "com.appodeal.mediation": {
+      "version": "https://github.com/appodeal/appodeal-unity-plugin-upm.git#v3.2.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.google.external-dependency-manager": "1.2.175"
+      },
+      "hash": "b86d86381f4d3ec418e51e140187eb1e70b0d24d"
+    },
     "com.cysharp.unitask": {
       "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "2e225fb8414e023df2aa3acae2ef225471981316"
+    },
+    "com.google.external-dependency-manager": {
+      "version": "file:C:/Users/Илья/Downloads/com.google.external-dependency-manager-1.2.179.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
     },
     "com.svermeulen.extenject": {
       "version": "https://github.com/Mathijs-Bakker/Extenject.git?path=UnityProject/Assets/Plugins/Zenject/Source",

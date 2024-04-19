@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "com.appodeal.mediation": "https://github.com/appodeal/appodeal-unity-plugin-upm.git#v3.2.1",
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+    "com.google.external-dependency-manager": "file:C:/Users/Илья/Downloads/com.google.external-dependency-manager-1.2.179.tgz",
     "com.svermeulen.extenject": "https://github.com/Mathijs-Bakker/Extenject.git?path=UnityProject/Assets/Plugins/Zenject/Source",
     "com.unity.collab-proxy": "2.3.1",
     "com.unity.feature.2d": "2.0.0",
