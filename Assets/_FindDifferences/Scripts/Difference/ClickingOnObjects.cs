@@ -5,34 +5,40 @@ namespace _FindDifferences.Scripts.Difference
 {
     public class ClickingOnObjects : IInitializable, IDisposable
     {
+        public event Action<int> DifferenceFoundGettingIndex;
         public event Action DifferenceFound;
 
-        private readonly DifferenceView _differenceView;
+        private readonly View _view;
 
-        public ClickingOnObjects(DifferenceView differenceView)
+        public ClickingOnObjects(View view)
         {
-            _differenceView = differenceView;
+            _view = view;
         }
 
         public void Initialize()
         {
-            for (var i = 0; i < _differenceView.CountDifference; i++)
+            for (var i = 0; i < _view.CountDifference; i++)
             {
-                _differenceView.GetDifference(i).Button1.onClick.AddListener(Click);
-                _differenceView.GetDifference(i).Button2.onClick.AddListener(Click);
+                var index = i;
+                _view.GetDifference(i).Button1.onClick.AddListener(() => Click(index));
+                _view.GetDifference(i).Button2.onClick.AddListener(() => Click(index));
             }
         }
 
         public void Dispose()
         {
-            for (var i = 0; i < _differenceView.CountDifference; i++)
+            for (var i = 0; i < _view.CountDifference; i++)
             {
-                _differenceView.GetDifference(i).Button1.onClick.RemoveListener(Click);
-                _differenceView.GetDifference(i).Button2.onClick.RemoveListener(Click);
+                var index = i;
+                _view.GetDifference(i).Button1.onClick.RemoveListener(() => Click(index));
+                _view.GetDifference(i).Button2.onClick.RemoveListener(() => Click(index));
             }
         }
 
-        private void Click()
-            => DifferenceFound?.Invoke();
+        private void Click(int indexButton)
+        {
+            DifferenceFoundGettingIndex?.Invoke(indexButton);
+            DifferenceFound?.Invoke();
+        } 
     }
 }

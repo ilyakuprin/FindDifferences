@@ -13,7 +13,7 @@ namespace _FindDifferences.Scripts.Difference
         public Button Button2;
     }
 
-    public class DifferenceView : MonoBehaviour
+    public class View : MonoBehaviour
     {
         [SerializeField] private Transform _image1;
         [SerializeField] private Transform _image2;
