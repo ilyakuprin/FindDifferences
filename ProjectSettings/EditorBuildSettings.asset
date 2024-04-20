@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_FindDifferences/Scenes/Level1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/_FindDifferences/Scenes/Boot.unity
+    guid: 91f6d7dc34d510241afceea5251c98a0
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c33d038eb7c692d41b33eb17923f6aa2, type: 2}

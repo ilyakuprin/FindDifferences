@@ -6,7 +6,6 @@ namespace _FindDifferences.Scripts.Difference
     public class ClickingOnObjects : IInitializable, IDisposable
     {
         public event Action<int> DifferenceFoundGettingIndex;
-        public event Action DifferenceFound;
 
         private readonly View _view;
 
@@ -36,9 +35,6 @@ namespace _FindDifferences.Scripts.Difference
         }
 
         private void Click(int indexButton)
-        {
-            DifferenceFoundGettingIndex?.Invoke(indexButton);
-            DifferenceFound?.Invoke();
-        } 
+            => DifferenceFoundGettingIndex?.Invoke(indexButton);
     }
 }

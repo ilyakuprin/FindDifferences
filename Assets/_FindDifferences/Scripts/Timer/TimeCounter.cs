@@ -27,6 +27,12 @@ namespace _FindDifferences.Scripts.Timer
             _cts.Dispose();
         }
 
+        public void AddTime(float value)
+        {
+            if (value > 0)
+                _time += value;
+        }
+
         private void StartCount()
             => Count().Forget();
 

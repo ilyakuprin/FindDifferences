@@ -6,6 +6,8 @@ namespace _FindDifferences.Scripts.Difference
 {
     public class Fading : IInitializable, IDisposable
     {
+        public event Action Faded;
+        
         private const float EndValueFade = 0f;
         private const float TimeFade = 1f;
         
@@ -13,7 +15,7 @@ namespace _FindDifferences.Scripts.Difference
         private readonly View _view;
 
         public Fading(ClickingOnObjects clickingOnObjects,
-                                View view)
+                      View view)
         {
             _clickingOnObjects = clickingOnObjects;
             _view = view;
@@ -26,6 +28,9 @@ namespace _FindDifferences.Scripts.Difference
             => _clickingOnObjects.DifferenceFoundGettingIndex -= Fade;
 
         private void Fade(int indexDifference)
-            => _view.GetDifference(indexDifference).Image2.DOFade(EndValueFade, TimeFade);
+        {
+            _view.GetDifference(indexDifference).Image2.DOFade(EndValueFade, TimeFade)
+                .OnKill(() => Faded?.Invoke());
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace _FindDifferences.Scripts.Saves
         
         public SaveData Data => _saveData;
 
-        private void Awake()
+        private void Start()
         {
             LoadData();
             Loaded?.Invoke();
