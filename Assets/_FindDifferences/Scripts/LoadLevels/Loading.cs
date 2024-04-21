@@ -18,8 +18,8 @@ namespace _FindDifferences.Scripts.LoadLevels
 
         private void LoadLevel()
         {
-            //тут можно ссделать загрузку следующего уровня: var lvl = "Level" + _jsonIO.Data.Level.ToString();
-            
+            //тут можно сделать загрузку следующего уровня: var lvl = "Level" + _jsonIO.Data.Level.ToString();
+
             Addressables.InstantiateAsync("Level1").Completed += prefab =>
             {
                 _level = prefab.Result;

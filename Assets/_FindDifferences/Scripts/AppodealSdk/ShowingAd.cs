@@ -1,7 +1,7 @@
 using System;
 using _FindDifferences.Scripts.UI;
-using AppodealStack.Monetization.Api;
-using AppodealStack.Monetization.Common;
+//using AppodealStack.Monetization.Api;
+//using AppodealStack.Monetization.Common;
 using Zenject;
 
 namespace _FindDifferences.Scripts.AppodealSdk
@@ -23,7 +23,7 @@ namespace _FindDifferences.Scripts.AppodealSdk
 
         private static void ShowInterstitial()
         {
-            if (Appodeal.IsLoaded(AppodealAdType.Interstitial) &&
+            /*if (Appodeal.IsLoaded(AppodealAdType.Interstitial) &&
                 Appodeal.CanShow(AppodealAdType.Interstitial) &&
                 !Appodeal.IsPrecache(AppodealAdType.Interstitial))
             {
@@ -32,7 +32,7 @@ namespace _FindDifferences.Scripts.AppodealSdk
             else if (!Appodeal.IsAutoCacheEnabled(AppodealAdType.Interstitial))
             {
                 Appodeal.Cache(AppodealAdType.Interstitial);
-            }
+            }*/
         }
     }
 }
